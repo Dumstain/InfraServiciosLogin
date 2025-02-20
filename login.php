@@ -58,57 +58,6 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html>
 <head>
     <title>Tienda Skyvel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            text-align: center;
-        }
-        h1 {
-            color: #1877f2;
-        }
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        input, button {
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #1877f2;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #155db2;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            background: white;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 300px;
-        }
-        form.inline {
-            display: inline;
-        }
-    </style>
 </head>
 <body>
     <h1>Tienda Skyvel</h1>
@@ -122,7 +71,7 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($productos as $row) { ?>
             <li>
                 <?php echo htmlspecialchars($row["nombre"]) . " - $" . htmlspecialchars($row["precio"]) . " - Stock: " . htmlspecialchars($row["stock"]); ?>
-                <form method="POST" class="inline">
+                <form method="POST">
                     <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
                     <button type="submit" name="eliminar">Eliminar</button>
                 </form>
