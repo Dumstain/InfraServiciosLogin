@@ -73,5 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br><br>
         <input type="submit" value="Agregar Producto">
     </form>
+    <p><a href="exito.php">Ver productos</a></p>
 </body>
 </html>
