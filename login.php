@@ -8,7 +8,7 @@ $host = '10.0.0.2';
 $port = 5432;
 $dbname = 'mibd';
 $dbuser = 'webuser';
-$dbpassword = 'TU_CONTRASEÑA_AQUI';  // Reemplaza con la contraseña real
+$dbpassword = 'contra1234';  // Reemplaza con la contraseña real
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
 
